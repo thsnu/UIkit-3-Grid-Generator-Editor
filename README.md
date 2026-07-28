@@ -11,7 +11,10 @@ The preview runs against the real `uikit.css` / `uikit.js`, so what you see
 while building is exactly how it behaves in a browser, including responsive
 behavior at every breakpoint.
 
-Created by {ths} Thomas Schostok, www.ths.works
+Website → https://thsnu.github.io/UIkit-3-Grid-Generator-Editor/
+
+Created by {ths} Thomas Schostok, www.ths.works, www.ths.nu
+
 
 <img width="2814" height="1736" alt="Screenshot" src="https://github.com/user-attachments/assets/479a4724-f4b4-4635-948a-bf6498fbc247" />
 
