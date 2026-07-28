@@ -1,2 +1,24 @@
-# UIkit-3-Grid-Generator-Editor
-A visual, drag-and-drop layout builder for the UIkit 3.x CSS framework
+# UIkit 3 Grid Generator & Editor
+
+A visual, drag-and-drop layout builder for **UIkit 3.25**.
+
+It lets you compose sections, containers, grids and columns on a canvas,
+adjust their UIkit options (width, flex, spacing, sizing, and more) per
+breakpoint, and get back clean HTML you can drop straight into a UIkit
+project — plus a field for any custom CSS on top.
+
+The preview runs against the real `uikit.css` / `uikit.js`, so what you see
+while building is exactly how it behaves in a browser, including responsive
+behavior at every breakpoint.
+
+Created by {ths} Thomas Schostok, www.ths.works
+
+## Run it
+
+Download and run locally (if needed):
+
+```bash
+python3 -m http.server 8777
+```
+
+Open `http://localhost:8777`.
