@@ -13,6 +13,8 @@ behavior at every breakpoint.
 
 Created by {ths} Thomas Schostok, www.ths.works
 
+<img width="2814" height="1736" alt="Screenshot" src="https://github.com/user-attachments/assets/479a4724-f4b4-4635-948a-bf6498fbc247" />
+
 ## Run it
 
 Download and run locally (if needed):
