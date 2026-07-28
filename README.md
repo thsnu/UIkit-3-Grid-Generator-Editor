@@ -1,6 +1,6 @@
 # UIkit 3 Grid Generator & Editor
 
-A visual, drag-and-drop layout builder for the **UIkit 3.25** CSS Framework.
+A visual, drag-and-drop layout builder for the **UIkit 3.x** CSS Framework.
 
 It lets you compose sections, containers, grids and columns on a canvas,
 adjust their UIkit options (width, flex, spacing, sizing, and more) per
