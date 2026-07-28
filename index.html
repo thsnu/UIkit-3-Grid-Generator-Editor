@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{ths} UIkit 3 Grid Generator & Editor</title>
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+<header class="app-header">
+  <div class="brand">
+    <button type="button" class="brand-btn" id="btn-about" title="About this generator">
+      <strong>{ths} UIkit Grid Generator</strong>
+      <span class="badge" id="uk-version">3.25</span>
+    </button>
+  </div>
+
+  <div class="hgroup" id="viewport-bar" title="Preview width – media queries trigger exactly at this width"></div>
+
+  <div class="hgroup">
+    <label class="chk"><input type="checkbox" id="opt-outline" checked> Outlines</label>
+    <label class="chk"><input type="checkbox" id="opt-labels" checked> Labels</label>
+  </div>
+
+  <div class="spacer"></div>
+
+  <div class="hgroup">
+    <button class="btn" id="btn-undo" title="Undo (Ctrl/Cmd+Z)">↶</button>
+    <button class="btn" id="btn-redo" title="Redo (Ctrl/Cmd+Shift+Z)">↷</button>
+    <button class="btn" id="btn-presets">Presets ▾</button>
+    <button class="btn" id="btn-export">JSON ↓</button>
+    <button class="btn" id="btn-import">JSON ↑</button>
+    <button class="btn btn-danger" id="btn-clear">Clear</button>
+  </div>
+</header>
+
+<div class="app-body">
+
+  <!-- ============ Structure ============ -->
+  <aside class="panel panel-left">
+    <div class="panel-head">
+      <span>Structure</span>
+      <div class="hgroup">
+        <button class="btn btn-mini" id="add-section" title="Add section">+ Section</button>
+        <button class="btn btn-mini" id="add-container" title="Container at top level">+ Container</button>
+        <button class="btn btn-mini" id="add-grid" title="Grid at top level">+ Grid</button>
+      </div>
+    </div>
+    <div class="panel-body" id="tree"></div>
+    <div class="panel-foot">
+      <small>Click = select · Drag = move</small>
+    </div>
+  </aside>
+
+  <!-- ============ Preview ============ -->
+  <main class="stage">
+    <div class="stage-bar">
+      <span id="stage-info" class="muted">–</span>
+      <span class="spacer"></span>
+      <span id="bp-indicator" class="bp-indicator"></span>
+    </div>
+    <div class="stage-scroll" id="stage-scroll">
+      <div class="frame-wrap" id="frame-wrap"></div>
+    </div>
+  </main>
+
+  <!-- ============ Inspector ============ -->
+  <aside class="panel panel-right">
+    <div class="panel-head">
+      <span id="inspector-title">Properties</span>
+      <div class="hgroup">
+        <button class="btn btn-mini" id="btn-duplicate" title="Duplicate">⧉</button>
+        <button class="btn btn-mini btn-danger" id="btn-delete" title="Delete">✕</button>
+      </div>
+    </div>
+    <div class="panel-body" id="inspector">
+      <p class="hint">Nothing selected. Click an element in the preview or in the structure tree.</p>
+    </div>
+  </aside>
+</div>
+
+<!-- ============ Code ============ -->
+<section class="code-area" id="code-area">
+  <div class="code-col">
+    <div class="code-head">
+      <span>HTML</span>
+      <div class="hgroup">
+        <label class="chk"><input type="checkbox" id="opt-fullpage"> full document</label>
+        <button class="btn btn-mini" data-copy="out-html">Copy</button>
+      </div>
+    </div>
+    <textarea id="out-html" spellcheck="false" readonly></textarea>
+  </div>
+  <div class="code-col">
+    <div class="code-head">
+      <span>CSS <small class="muted">(deviating from UIkit – applied live)</small></span>
+      <div class="hgroup">
+        <button class="btn btn-mini" data-copy="out-css">Copy</button>
+      </div>
+    </div>
+    <textarea id="out-css" spellcheck="false" placeholder="/* Custom CSS, e.g.
+.my-grid > * { border-left: 1px solid #e5e5e5; }
+*/"></textarea>
+  </div>
+  <button class="code-toggle" id="code-toggle" title="Collapse/expand code area">▾</button>
+</section>
+
+<div class="dropdown" id="presets-menu" hidden></div>
+<input type="file" id="import-file" accept="application/json,.json" hidden>
+
+<div class="modal-overlay" id="about-overlay" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="about-title">
+    <h2 id="about-title">{ths} UIkit Grid Generator & Editor</h2>
+    <p class="modal-version">Version <span id="about-version">1.0</span> · built for UIkit <span id="about-uk-version"></span></p>
+    <p>A visual, drag-and-drop layout builder that sticks strictly to UIkit's own grid, width, flex, container, section, padding and margin system — every option maps 1:1 to a real UIkit class, so what you build here behaves exactly the same in the browser.</p>
+    <p>Created by {ths} Thomas Schostok<br>
+      <a href="https://github.com/thsnu" target="_blank" rel="noopener">github.com/thsnu</a>
+    </p>
+    <button type="button" class="modal-close" id="about-close">Close</button>
+  </div>
+</div>
+
+<script src="js/catalog.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
